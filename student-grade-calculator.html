@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .btn-calculate {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .btn-calculate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-calculate:active {
+            transform: translateY(0);
+        }
+
+        .result-container {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            display: none;
+        }
+
+        .result-container.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .result-label {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .result-value {
+            font-weight: 700;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .grade-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .grade-A { background: #10b981; color: white; }
+        .grade-B { background: #3b82f6; color: white; }
+        .grade-C { background: #f59e0b; color: white; }
+        .grade-D { background: #ef4444; color: white; }
+        .grade-E { background: #dc2626; color: white; }
+        .grade-F { background: #7f1d1d; color: white; }
+
+        .status-passed {
+            color: #10b981;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .status-failed {
+            color: #ef4444;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .error-message {
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Student Grade Calculator</h1>
+        <p class="subtitle">គណនាពិន្ទុ និងនិទ្ទេសសិស្ស</p>
+
+        <form id="gradeForm">
+            <div class="form-group">
+                <label for="math">📐 គណិតវិទ្យា (Math) - ពិន្ទុពី 0 ដល់ 100:</label>
+                <input type="number" id="math" name="math" min="0" max="100" required>
+            </div>
+
+            <div class="form-group">
+                <label for="physics">⚛️ រូបវិទ្យា (Physics) - ពិន្ទុពី 0 ដល់ 100:</label>
+                <input type="number" id="physics" name="physics" min="0" max="100" required>
+            </div>
+
+            <div class="form-group">
+                <label for="khmer">📚 ភាសាខ្មែរ (Khmer) - ពិន្ទុពី 0 ដល់ 100:</label>
+                <input type="number" id="khmer" name="khmer" min="0" max="100" required>
+            </div>
+
+            <button type="submit" class="btn-calculate">គណនាលទ្ធផល</button>
+        </form>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="result-container" id="resultContainer">
+            <div class="result-item">
+                <span class="result-label">មធ្យមភាគ (Average):</span>
+                <span class="result-value" id="averageScore">0</span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">និទ្ទេស (Grade):</span>
+                <span class="result-value" id="grade"></span>
+            </div>
+            <div class="result-item">
+                <span class="result-label">លទ្ធផល (Result):</span>
+                <span class="result-value" id="result"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get form and result elements
+        const gradeForm = document.getElementById('gradeForm');
+        const resultContainer = document.getElementById('resultContainer');
+        const errorMessage = document.getElementById('errorMessage');
+        const averageScore = document.getElementById('averageScore');
+        const gradeElement = document.getElementById('grade');
+        const resultElement = document.getElementById('result');
+
+        // Function to calculate grade based on average score using if-else if
+        function calculateGrade(average) {
+            let grade = '';
+            
+            if (average >= 95 && average <= 100) {
+                grade = 'A';
+            } else if (average >= 90 && average < 95) {
+                grade = 'B';
+            } else if (average >= 80 && average < 90) {
+                grade = 'C';
+            } else if (average >= 70 && average < 80) {
+                grade = 'D';
+            } else if (average >= 60 && average < 70) {
+                grade = 'E';
+            } else if (average >= 0 && average < 60) {
+                grade = 'F';
+            }
+            
+            return grade;
+        }
+
+        // Function to determine pass or fail
+        function determineResult(grade) {
+            if (grade === 'A' || grade === 'B' || grade === 'C' || grade === 'D') {
+                return 'Passed';
+            } else {
+                return 'Failed';
+            }
+        }
+
+        // Function to validate input scores
+        function validateScores(math, physics, khmer) {
+            if (math < 0 || math > 100 || physics < 0 || physics > 100 || khmer < 0 || khmer > 100) {
+                return false;
+            }
+            return true;
+        }
+
+        // Handle form submission
+        gradeForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Hide previous results and errors
+            resultContainer.classList.remove('show');
+            errorMessage.classList.remove('show');
+
+            // Get input values
+            const mathScore = parseFloat(document.getElementById('math').value);
+            const physicsScore = parseFloat(document.getElementById('physics').value);
+            const khmerScore = parseFloat(document.getElementById('khmer').value);
+
+            // Validate scores
+            if (!validateScores(mathScore, physicsScore, khmerScore)) {
+                errorMessage.textContent = '❌ សូមបញ្ចូលពិន្ទុរវាង 0 ដល់ 100 សម្រាប់មុខវិជ្ជាទាំងអស់!';
+                errorMessage.classList.add('show');
+                return;
+            }
+
+            // Calculate average
+            const average = (mathScore + physicsScore + khmerScore) / 3;
+            const roundedAverage = Math.round(average * 100) / 100; // Round to 2 decimal places
+
+            // Calculate grade using if-else if
+            const grade = calculateGrade(average);
+
+            // Determine result (Passed/Failed)
+            const result = determineResult(grade);
+
+            // Display results
+            averageScore.textContent = roundedAverage.toFixed(2);
+            
+            // Set grade with badge styling
+            gradeElement.innerHTML = `<span class="grade-badge grade-${grade}">${grade}</span>`;
+            
+            // Set result with appropriate styling
+            if (result === 'Passed') {
+                resultElement.innerHTML = `<span class="status-passed">✅ ${result}</span>`;
+            } else {
+                resultElement.innerHTML = `<span class="status-failed">❌ ${result}</span>`;
+            }
+
+            // Show result container with animation
+            resultContainer.classList.add('show');
+        });
+
+        // Allow decimal input and real-time validation
+        const inputs = document.querySelectorAll('input[type="number"]');
+        inputs.forEach(input => {
+            input.addEventListener('input', function() {
+                if (this.value < 0) this.value = 0;
+                if (this.value > 100) this.value = 100;
+            });
+        });
+    </script>
+</body>
+</html>
