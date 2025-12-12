@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Structure - Loops</title>
+</head>
+<body>
+    <h1>Loops in JavaScript</h1>
+    <h3>1. While Loops in JavaScript</h3>
+   <script>
+        var i = 0;
+        while (i <= 50) {
+            document.write(i+" ");
+            i++;
+        }
+   </script>
+   <h3>2. Do While Loops in JavaScript</h3>
+    <script>
+          var j = 0;
+          do {
+                document.write(j+" ");
+                j++;
+          } while (j <= 50);
+    </script>
+    <h3>3. For Loops in JavaScript</h3>
+    <script>
+            for (var k = 0; k <= 50; k++) {
+                document.write(k+" ");
+            }
+    </script>
+    <hr/>
+    <h3>Form Student Information</h3>
+    <form>
+        Name: <input type="text" name="name"><br><br>
+        Age: <input type="number" name="age"><br><br>
+        Birthday 1: <input type="date" name="birthday"><br><br>
+          Birthday 2: <select name="day">
+            <option value="0">dd</option>
+                <script>
+                    for (var d = 1; d <= 31; d++) {
+                        document.write('<option value="'+d+'">'+d+'</option>');
+                    }
+                </script>
+            </select>
+            <select name="month">
+            <option value="0">mm</option>
+                <script>
+                    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                    for (var n = 0; n < months.length; n++) {
+                        document.write('<option value="'+(n+1)+'">'+months[n]+'</option>');
+                    /*for (var m = 1; m <= 12; m++) {
+                        document.write('<option value="'+m+'">'+m+'</option>');
+                    */
+                   }
+                </script>
+            </select> 
+            <select name="year">
+            <option value="0">yyyy</option>
+                <script>
+                    var currentYear = new Date().getFullYear();
+                    for (var y = currentYear; y >= 2000; y--) {
+                        document.write('<option value="'+y+'">'+y+'</option>');
+                    }
+                </script>
+            </select>
+            <br/><br/>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
