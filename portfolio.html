@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KITH SOPHAL - IT Manager & Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6c63ff',
+                        secondary: '#ff6584',
+                        accent: '#4ecdc4',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease forwards;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-lg shadow-lg z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                    KITH SOPHAL
+                </div>
+                <ul class="hidden md:flex space-x-6" id="navLinks">
+                    <li><a href="#home" class="text-white hover:text-purple-400 transition-colors">Home</a></li>
+                    <li><a href="#about" class="text-white hover:text-purple-400 transition-colors">About</a></li>
+                    <li><a href="#experience" class="text-white hover:text-purple-400 transition-colors">Experience</a></li>
+                    <li><a href="#education" class="text-white hover:text-purple-400 transition-colors">Education</a></li>
+                    <li><a href="#training" class="text-white hover:text-purple-400 transition-colors">Training</a></li>
+                    <li><a href="#skills" class="text-white hover:text-purple-400 transition-colors">Skills</a></li>
+                    <li><a href="#projects" class="text-white hover:text-purple-400 transition-colors">Projects</a></li>
+                    <li><a href="#hobbies" class="text-white hover:text-purple-400 transition-colors">Hobbies</a></li>
+                    <li><a href="#contact" class="text-white hover:text-purple-400 transition-colors">Contact</a></li>
+                </ul>
+                <button class="md:hidden text-white focus:outline-none" id="burger">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="hidden md:hidden pb-4" id="mobileMenu">
+                <a href="#home" class="block py-2 text-white hover:text-purple-400">Home</a>
+                <a href="#about" class="block py-2 text-white hover:text-purple-400">About</a>
+                <a href="#experience" class="block py-2 text-white hover:text-purple-400">Experience</a>
+                <a href="#education" class="block py-2 text-white hover:text-purple-400">Education</a>
+                <a href="#training" class="block py-2 text-white hover:text-purple-400">Training</a>
+                <a href="#skills" class="block py-2 text-white hover:text-purple-400">Skills</a>
+                <a href="#projects" class="block py-2 text-white hover:text-purple-400">Projects</a>
+                <a href="#hobbies" class="block py-2 text-white hover:text-purple-400">Hobbies</a>
+                <a href="#contact" class="block py-2 text-white hover:text-purple-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 flex items-center justify-center relative overflow-hidden" id="home">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-purple-500 rounded-full opacity-10 animate-float"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-pink-500 rounded-full opacity-10 animate-float" style="animation-delay: 2s;"></div>
+        
+        <div class="text-center text-white z-10 px-4 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 animate-fadeInUp">Hi, I'm KITH SOPHAL</h1>
+            <p class="text-2xl md:text-3xl text-cyan-400 mb-6 animate-fadeInUp" style="animation-delay: 0.2s;">IT Manager & Web Developer</p>
+            <p class="text-lg md:text-xl mb-8 text-gray-300 animate-fadeInUp" style="animation-delay: 0.4s;">Experienced IT professional from Cambodia | Specialized in IT management, web development, and digital transformation</p>
+            <div class="flex flex-wrap gap-4 justify-center animate-fadeInUp" style="animation-delay: 0.6s;">
+                <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold hover:shadow-lg hover:-translate-y-1 transition-all duration-300">View My Work</a>
+                <a href="#contact" class="px-8 py-3 border-2 border-purple-500 rounded-full font-semibold hover:bg-purple-500 hover:-translate-y-1 transition-all duration-300">Get In Touch</a>
+                <a href="d:\BBU Work\2024\My CV Kith Sophal Update 2024.pdf" target="_blank" class="px-8 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full font-semibold hover:shadow-lg hover:-translate-y-1 transition-all duration-300">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold text-gray-900">IT Manager & Web Developer</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-4">
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div><span class="font-semibold text-gray-600">Full Name:</span> <span class="text-gray-900">KITH SOPHAL</span></div>
+                            <div><span class="font-semibold text-gray-600">Nationality:</span> <span class="text-gray-900">Khmer</span></div>
+                            <div><span class="font-semibold text-gray-600">Date of Birth:</span> <span class="text-gray-900">mmm dd, yyyy</span></div>
+                            <div><span class="font-semibold text-gray-600">Location:</span> <span class="text-gray-900">Kandal Province, Cambodia</span></div>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        I'm an experienced IT Manager with a strong background in web development, system administration, and digital transformation. Currently serving as IT Manager at Build Bright University, I lead technical teams and manage comprehensive IT infrastructure.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        With expertise in both frontend and backend development, I specialize in creating responsive websites, managing servers, and implementing efficient IT solutions. My experience spans across education, e-commerce, and enterprise systems.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <p class="text-3xl font-bold text-purple-600">5+</p>
+                            <p class="text-gray-600">Years Experience</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <p class="text-3xl font-bold text-pink-600">20+</p>
+                            <p class="text-gray-600">Projects Completed</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold hover:shadow-lg hover:-translate-y-1 transition-all duration-300">Let's Talk</a>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-400 to-pink-400 rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
+                        <img src="https://raw.githubusercontent.com/sophalit/portfolio/main/kith-sophal-photo.jpg" 
+                             alt="KITH SOPHAL - IT Manager & Web Developer" 
+                             class="relative w-full h-auto rounded-3xl shadow-2xl object-cover transform hover:scale-105 transition-transform duration-300 border-4 border-white"
+                             onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22%3E%3Crect fill=%22%2366b3ff%22 width=%22400%22 height=%22500%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2280%22 text-anchor=%22middle%22 dy=%22.3em%22%3E👨‍💻%3C/text%3E%3C/svg%3E';">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">Work Experience</h2>
+            <p class="text-center text-gray-600 mb-12 text-lg">Over 20 years of professional experience in IT, education, and leadership</p>
+            
+            <div class="space-y-8">
+                
+                <!-- Build Bright University - Multiple Roles -->
+                <div class="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-purple-500">
+                    <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-3">
+                                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl font-bold mr-4">
+                                    🏛️
+                                </div>
+                                <div>
+                                    <h3 class="text-3xl font-bold text-gray-900">Build Bright University (BBU)</h3>
+                                    <p class="text-lg text-purple-600 font-semibold">Multiple Leadership Roles</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="inline-block bg-purple-600 text-white px-4 py-2 rounded-full font-semibold mt-2 md:mt-0">Apr 2008 - Present</span>
+                    </div>
+
+                    <!-- Chief of Chairman Office -->
+                    <div class="mb-6 bg-white p-6 rounded-xl shadow-md">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                            Chief of Chairman Office
+                        </h4>
+                        <div class="space-y-2">
+                            <p class="font-semibold text-purple-700 mb-2">Board & Governance Secretariat:</p>
+                            <ul class="list-disc list-inside space-y-1 text-gray-700 ml-4">
+                                <li>Running the Board secretariat: planning meetings, preparing agendas and documents, recording minutes/resolutions</li>
+                                <li>Providing decision support to the Chairman through briefings, issue escalation, and structured recommendations</li>
+                                <li>Managing official correspondence and governance records with secure document control</li>
+                                <li>Coordinating governance policies and procedures, ensuring consistent application</li>
+                                <li>Acting as liaison between Chairman and university leadership/committees</li>
+                                <li>Supporting audit, compliance, and risk follow-up with Internal Audit Unit</li>
+                                <li>Handling protocol and stakeholder engagement for high-level events</li>
+                                <li>Ensuring strong confidentiality, ethics, and integrity in all board processes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Assistant Professor -->
+                    <div class="mb-6 bg-white p-6 rounded-xl shadow-md">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <span class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>
+                            Assistant Professor
+                        </h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <p class="font-semibold text-cyan-700 mb-2">Courses Taught:</p>
+                                <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                                    <li>AI Literacy and AI Engineering</li>
+                                    <li>Contemporary AI Issues</li>
+                                    <li>UX/UI Design</li>
+                                    <li>Web Development Application</li>
+                                    <li>Programming Methodology (C/C++)</li>
+                                    <li>Digital Literacy</li>
+                                    <li>Video Editing</li>
+                                    <li>Motion Graphic Designer</li>
+                                    <li>Digital Marketing</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-cyan-700 mb-2">Technical Skills:</p>
+                                <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                                    <li>Graphic Design (Adobe CC 2025)</li>
+                                    <li>Web Programming (HTML, CSS, JavaScript, jQuery, Ajax)</li>
+                                    <li>Web Application (PHP, MySQL, Laravel)</li>
+                                    <li>Full-Stack Development (Front-End & Back-End)</li>
+                                    <li>Programming (C/C++, C#, ASP.Net MVC)</li>
+                                    <li>Multimedia (Sony Vegas, Adobe Premiere/After Effects 2021)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Senior Lecturer -->
+                    <div class="mb-6 bg-white p-6 rounded-xl shadow-md">
+                        <h4 class="text-xl font-bold text-gray-900 mb-3 flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                            Senior Lecturer
+                        </h4>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">Computer Teacher</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">E-Commerce</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">Digital Marketing</span>
+                        </div>
+                    </div>
+
+                    <!-- Additional Roles -->
+                    <div class="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl">
+                        <h4 class="text-lg font-bold text-gray-900 mb-3">Additional Leadership Positions:</h4>
+                        <div class="grid md:grid-cols-2 gap-3 text-sm">
+                            <div class="flex items-center">
+                                <span class="text-purple-500 mr-2">✓</span>
+                                <span class="text-gray-700">Acting Secretary / Chief Planning & Business Deployment</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-purple-500 mr-2">✓</span>
+                                <span class="text-gray-700">Coordinator of Business Development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-purple-500 mr-2">✓</span>
+                                <span class="text-gray-700">Chief of Promotion Office</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-purple-500 mr-2">✓</span>
+                                <span class="text-gray-700">Graphic Designer and Web Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Build Bright Group Limited -->
+                <div class="bg-gradient-to-r from-cyan-50 to-blue-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-cyan-500">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div class="flex items-center mb-3 md:mb-0">
+                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mr-4">
+                                🏢
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Graphic Designer and Web Designer</h3>
+                                <p class="text-lg text-cyan-600 font-semibold">Build Bright Group Limited (BBG)</p>
+                            </div>
+                        </div>
+                        <span class="inline-block bg-cyan-600 text-white px-4 py-2 rounded-full font-semibold text-sm">May 2007 - Mar 2008</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Administrative duties in offices</li>
+                        <li>Digital photography and photo development for customer distribution</li>
+                        <li>Design leaflets, banners, books, name cards, ID cards, and promotional materials</li>
+                        <li>Software Development, Database Programming, and Web Development</li>
+                    </ul>
+                </div>
+
+                <!-- Economic Language Center -->
+                <div class="bg-gradient-to-r from-green-50 to-teal-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-green-500">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div class="flex items-center mb-3 md:mb-0">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mr-4">
+                                👨‍🏫
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Computer Teacher (Part Time)</h3>
+                                <p class="text-lg text-green-600 font-semibold">Economic Language Center</p>
+                            </div>
+                        </div>
+                        <span class="inline-block bg-green-600 text-white px-4 py-2 rounded-full font-semibold text-sm">2004 - 2008</span>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                            <li>Basic Computer (Ms. Windows, Ms. Office)</li>
+                            <li>Database Management (Access I, II + Programming)</li>
+                            <li>Graphic Design (CorelDRAW X5, Adobe Photoshop CS4)</li>
+                        </ul>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                            <li>Network Administration (Windows Server 2003)</li>
+                            <li>Computer Accounting (Quick Book Pro 2004)</li>
+                            <li>Computer Repairing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- The Flash Computer Center -->
+                <div class="bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-orange-500">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div class="flex items-center mb-3 md:mb-0">
+                            <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mr-4">
+                                💻
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Computer Teacher</h3>
+                                <p class="text-lg text-orange-600 font-semibold">The Flash Computer Center</p>
+                            </div>
+                        </div>
+                        <span class="inline-block bg-orange-600 text-white px-4 py-2 rounded-full font-semibold text-sm">2006 - 2007</span>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                            <li>Database Management (MS Access, SQL Server 2000)</li>
+                            <li>Graphic Design (CorelDRAW X4, Adobe Photoshop CS, Illustrator CS3)</li>
+                            <li>Programming (Turbo C, C++, Visual Basic 6.0)</li>
+                        </ul>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                            <li>Web Programming (HTML+CSS)</li>
+                            <li>Computer Accounting (Quick Book Pro, Advanced Excel)</li>
+                            <li>Computer Repairing (Troubleshooting Software)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Intent Creative Design -->
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-indigo-500">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div class="flex items-center mb-3 md:mb-0">
+                            <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mr-4">
+                                🎨
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Graphic Designer</h3>
+                                <p class="text-lg text-indigo-600 font-semibold">Intent Creative Design (Intent-CD)</p>
+                            </div>
+                        </div>
+                        <span class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-full font-semibold text-sm">2005 - 2006</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Creative Design for various clients</li>
+                        <li>Digital photography and photo development</li>
+                        <li>Design leaflets, banners, brochures, books, and name cards</li>
+                    </ul>
+                </div>
+
+                <!-- International Languages Institute -->
+                <div class="bg-gradient-to-r from-pink-50 to-rose-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-pink-500">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div class="flex items-center mb-3 md:mb-0">
+                            <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mr-4">
+                                🖥️
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-900">Computer Teacher</h3>
+                                <p class="text-lg text-pink-600 font-semibold">International Languages Institute</p>
+                            </div>
+                        </div>
+                        <span class="inline-block bg-pink-600 text-white px-4 py-2 rounded-full font-semibold text-sm">2003 - 2004</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Basic Computer (Ms. Windows, Ms. Office)</li>
+                        <li>Database Management System (Access I)</li>
+                        <li>Graphic Design (Adobe Photoshop CS)</li>
+                        <li>Computer Accounting (Quick Book Pro 2004)</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Experience Summary -->
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-gradient-to-br from-purple-500 to-pink-500 p-6 rounded-xl text-white text-center shadow-lg">
+                    <p class="text-4xl font-bold">17+</p>
+                    <p class="text-sm">Years at BBU</p>
+                </div>
+                <div class="bg-gradient-to-br from-cyan-500 to-blue-500 p-6 rounded-xl text-white text-center shadow-lg">
+                    <p class="text-4xl font-bold">20+</p>
+                    <p class="text-sm">Years Experience</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-500 to-teal-500 p-6 rounded-xl text-white text-center shadow-lg">
+                    <p class="text-4xl font-bold">7</p>
+                    <p class="text-sm">Organizations</p>
+                </div>
+                <div class="bg-gradient-to-br from-orange-500 to-red-500 p-6 rounded-xl text-white text-center shadow-lg">
+                    <p class="text-4xl font-bold">Multiple</p>
+                    <p class="text-sm">Leadership Roles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900">Education</h2>
+            
+            <!-- Timeline Container -->
+            <div class="relative">
+                <!-- Vertical Line -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 via-blue-500 to-pink-500"></div>
+                
+                <div class="space-y-12">
+                    <!-- Master's Degree -->
+                    <div class="relative">
+                        <div class="md:flex md:items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-4 md:mb-0">
+                                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ml-auto md:text-right">
+                                    <div class="inline-flex items-center mb-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                        Dec 2010 - June 2012
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Master of Science in Information Technology</h3>
+                                    <p class="text-purple-600 font-semibold mb-2">Sikkim Manipal University, India</p>
+                                    <p class="text-gray-700">Build Bright University (BBU) Main Campus, Phnom Penh, Cambodia</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex md:w-12 justify-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-10">
+                                    🎓
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12"></div>
+                        </div>
+                    </div>
+
+                    <!-- Bachelor's Degree -->
+                    <div class="relative">
+                        <div class="md:flex md:items-center md:flex-row-reverse">
+                            <div class="md:w-1/2 md:pl-12 mb-4 md:mb-0">
+                                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                    <div class="inline-flex items-center mb-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                        2004 - 2006
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Bachelor Degree of Information Technology</h3>
+                                    <p class="text-cyan-600 font-semibold">Build Bright University</p>
+                                    <p class="text-gray-700">Phnom Penh, Cambodia</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex md:w-12 justify-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-10">
+                                    🎓
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pr-12"></div>
+                        </div>
+                    </div>
+
+                    <!-- Associate Degree -->
+                    <div class="relative">
+                        <div class="md:flex md:items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-4 md:mb-0">
+                                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ml-auto md:text-right">
+                                    <div class="inline-flex items-center mb-3 bg-gradient-to-r from-green-500 to-teal-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                        2002 - 2004
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Associate in Computer Science</h3>
+                                    <p class="text-green-600 font-semibold">University Technology Phnom Penh</p>
+                                    <p class="text-gray-700">Phnom Penh, Cambodia</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex md:w-12 justify-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-10">
+                                    📚
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12"></div>
+                        </div>
+                    </div>
+
+                    <!-- High School -->
+                    <div class="relative">
+                        <div class="md:flex md:items-center md:flex-row-reverse">
+                            <div class="md:w-1/2 md:pl-12 mb-4 md:mb-0">
+                                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                    <div class="inline-flex items-center mb-3 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                        1999 - 2002
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">High School Education</h3>
+                                    <p class="text-orange-600 font-semibold">Beng Trabek High School</p>
+                                    <p class="text-gray-700">Phnom Penh, Cambodia</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex md:w-12 justify-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-10">
+                                    🏫
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pr-12"></div>
+                        </div>
+                    </div>
+
+                    <!-- College School -->
+                    <div class="relative">
+                        <div class="md:flex md:items-center">
+                            <div class="md:w-1/2 md:pr-12 mb-4 md:mb-0">
+                                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ml-auto md:text-right">
+                                    <div class="inline-flex items-center mb-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                        1996 - 1999
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">College School Education</h3>
+                                    <p class="text-indigo-600 font-semibold">Phsa Deam Thkouv College School</p>
+                                    <p class="text-gray-700">Phnom Penh, Cambodia</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex md:w-12 justify-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-10">
+                                    📖
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12"></div>
+                        </div>
+                    </div>
+
+                    <!-- Primary School -->
+                    <div class="relative">
+                        <div class="md:flex md:items-center md:flex-row-reverse">
+                            <div class="md:w-1/2 md:pl-12 mb-4 md:mb-0">
+                                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                                    <div class="inline-flex items-center mb-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                                        1989 - 1996
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Primary School Education</h3>
+                                    <p class="text-pink-600 font-semibold">Primary School</p>
+                                    <p class="text-gray-700">Cambodia</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:flex md:w-12 justify-center">
+                                <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg z-10">
+                                    ✏️
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 md:pr-12"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Education Summary Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                <div class="bg-gradient-to-br from-purple-500 to-pink-500 p-6 rounded-xl text-white text-center shadow-lg">
+                    <p class="text-3xl font-bold">Master's</p>
+                    <p class="text-sm">Degree</p>
+                </div>
+                <div class="bg-gradient-to-br from-cyan-500 to-blue-500 p-6 rounded-xl text-white text-center shadow-lg">
+                    <p class="text-3xl font-bold">Bachelor's</p>
+                    <p class="text-sm">Degree</p>
+                </div>
+                <div class="bg-gradient-to-br from-green-500 to-teal-500 p-6 rounded-xl text-white text-center shadow-lg">
+                    <p class="text-3xl font-bold">Associate</p>
+                    <p class="text-sm">Degree</p>
+                </div>
+                <div class="bg-gradient-to-br from-orange-500 to-red-500 p-6 rounded-xl text-white text-center shadow-lg">
+                    <p class="text-3xl font-bold">20+</p>
+                    <p class="text-sm">Years Learning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training & Certifications Section -->
+    <section id="training" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">Training & Certifications</h2>
+            <p class="text-center text-gray-600 mb-12 text-lg">Professional development and specialized training courses</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Training 1 -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-l-4 border-purple-500">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mr-4 flex-shrink-0">
+                            📋
+                        </div>
+                        <div>
+                            <span class="inline-block bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold mb-2">Oct 2005 - Feb 2006</span>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Secretarial and Administrative Affairs</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-1">Certificate Program</p>
+                    <p class="text-gray-600 text-sm">Asia Euro Institute (AEI)</p>
+                </div>
+
+                <!-- Training 2 -->
+                <div class="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-l-4 border-cyan-500">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mr-4 flex-shrink-0">
+                            🎨
+                        </div>
+                        <div>
+                            <span class="inline-block bg-cyan-500 text-white px-3 py-1 rounded-full text-xs font-semibold mb-2">May 2004 - Jul 2004</span>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">CorelDraw Design</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-1">Computer Program Certificate</p>
+                    <p class="text-gray-600 text-sm">Formosa Institute (FI)</p>
+                </div>
+
+                <!-- Training 3 -->
+                <div class="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-l-4 border-green-500">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mr-4 flex-shrink-0">
+                            🖼️
+                        </div>
+                        <div>
+                            <span class="inline-block bg-green-500 text-white px-3 py-1 rounded-full text-xs font-semibold mb-2">Dec 2003 - Mar 2004</span>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Adobe Photoshop (Level I+II)</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-1">Computer Program Certificate</p>
+                    <p class="text-gray-600 text-sm">KERD Organization</p>
+                </div>
+
+                <!-- Training 4 -->
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-l-4 border-orange-500">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mr-4 flex-shrink-0">
+                            📊
+                        </div>
+                        <div>
+                            <span class="inline-block bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold mb-2">Jun 2003 - Oct 2003</span>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Sales and Marketing</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-1">Certificate Program</p>
+                    <p class="text-gray-600 text-sm">Institute for Development of Entrepreneur (IDE)</p>
+                </div>
+
+                <!-- Training 5 -->
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-l-4 border-indigo-500">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-xl font-bold mr-4 flex-shrink-0">
+                            💰
+                        </div>
+                        <div>
+                            <span class="inline-block bg-indigo-500 text-white px-3 py-1 rounded-full text-xs font-semibold mb-2">Dec 2002 - Jan 2003</span>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">General Accounting</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 font-semibold mb-1">Certificate Program</p>
+                    <p class="text-gray-600 text-sm">Institute of Cambodian Education (ICE)</p>
+                </div>
+
+                <!-- Summary Card -->
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 text-white flex flex-col justify-center items-center">
+                    <div class="text-5xl font-bold mb-2">5</div>
+                    <p class="text-xl font-semibold mb-1">Professional</p>
+                    <p class="text-lg">Certifications</p>
+                    <div class="mt-4 flex flex-wrap gap-2 justify-center">
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-xs">Design</span>
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-xs">Business</span>
+                        <span class="px-3 py-1 bg-white/20 rounded-full text-xs">Admin</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Skills from Training -->
+            <div class="mt-12 bg-gradient-to-r from-purple-100 to-pink-100 p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Skills Acquired Through Training</h3>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="px-4 py-2 bg-white rounded-full text-gray-800 font-semibold shadow-md hover:shadow-lg transition">Adobe Photoshop</span>
+                    <span class="px-4 py-2 bg-white rounded-full text-gray-800 font-semibold shadow-md hover:shadow-lg transition">CorelDraw</span>
+                    <span class="px-4 py-2 bg-white rounded-full text-gray-800 font-semibold shadow-md hover:shadow-lg transition">Graphic Design</span>
+                    <span class="px-4 py-2 bg-white rounded-full text-gray-800 font-semibold shadow-md hover:shadow-lg transition">Accounting</span>
+                    <span class="px-4 py-2 bg-white rounded-full text-gray-800 font-semibold shadow-md hover:shadow-lg transition">Sales & Marketing</span>
+                    <span class="px-4 py-2 bg-white rounded-full text-gray-800 font-semibold shadow-md hover:shadow-lg transition">Administration</span>
+                    <span class="px-4 py-2 bg-white rounded-full text-gray-800 font-semibold shadow-md hover:shadow-lg transition">Secretarial Skills</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Technical Skills</h2>
+            
+            <!-- Technical Skills Grid -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-gray-800 p-6 rounded-2xl hover:bg-gray-750 hover:-translate-y-2 transition-all duration-300 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-400">Frontend Development</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>HTML/CSS</span>
+                                <span class="text-purple-400">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-full rounded-full skill-bar" style="width: 0%" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>JavaScript</span>
+                                <span class="text-purple-400">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-full rounded-full skill-bar" style="width: 0%" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Bootstrap/Tailwind</span>
+                                <span class="text-purple-400">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-full rounded-full skill-bar" style="width: 0%" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>jQuery</span>
+                                <span class="text-purple-400">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-full rounded-full skill-bar" style="width: 0%" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-2xl hover:bg-gray-750 hover:-translate-y-2 transition-all duration-300 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-cyan-400">Backend Development</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>PHP</span>
+                                <span class="text-cyan-400">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-full rounded-full skill-bar" style="width: 0%" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>MySQL/MariaDB</span>
+                                <span class="text-cyan-400">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-full rounded-full skill-bar" style="width: 0%" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Node.js</span>
+                                <span class="text-cyan-400">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-full rounded-full skill-bar" style="width: 0%" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>RESTful APIs</span>
+                                <span class="text-cyan-400">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-full rounded-full skill-bar" style="width: 0%" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-2xl hover:bg-gray-750 hover:-translate-y-2 transition-all duration-300 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-pink-400">IT Management</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Server Administration</span>
+                                <span class="text-pink-400">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-pink-500 to-red-500 h-full rounded-full skill-bar" style="width: 0%" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Network Management</span>
+                                <span class="text-pink-400">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-pink-500 to-red-500 h-full rounded-full skill-bar" style="width: 0%" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Linux/Windows Server</span>
+                                <span class="text-pink-400">82%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-pink-500 to-red-500 h-full rounded-full skill-bar" style="width: 0%" data-progress="82"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span>Project Management</span>
+                                <span class="text-pink-400">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-pink-500 to-red-500 h-full rounded-full skill-bar" style="width: 0%" data-progress="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Technologies -->
+            <div class="mt-12">
+                <h3 class="text-3xl font-bold text-center mb-8">Tools & Technologies</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold">Git/GitHub</span>
+                    <span class="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full font-semibold">WordPress</span>
+                    <span class="px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 rounded-full font-semibold">VS Code</span>
+                    <span class="px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 rounded-full font-semibold">Apache/Nginx</span>
+                    <span class="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full font-semibold">Docker</span>
+                    <span class="px-6 py-3 bg-gradient-to-r from-yellow-600 to-orange-600 rounded-full font-semibold">Photoshop</span>
+                    <span class="px-6 py-3 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full font-semibold">Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gradient-to-br from-orange-50 to-pink-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-500 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-8xl opacity-30">🎓</div>
+                        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="https://www.bbu.edu.kh" target="_blank" class="px-6 py-2 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition">View Site</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-900">BBU University Website</h3>
+                        <p class="text-gray-700 mb-4">Comprehensive university website with student portal, course management, and online registration system.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">PHP</span>
+                            <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-semibold">MySQL</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-500 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-8xl opacity-30">🛒</div>
+                        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="px-6 py-2 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition">View Demo</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-900">E-Commerce Platform</h3>
+                        <p class="text-gray-700 mb-4">Full-featured online store with payment integration, inventory management, and customer dashboard.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-semibold">PHP</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">JavaScript</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-500 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-8xl opacity-30">📊</div>
+                        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="px-6 py-2 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition">View Demo</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-900">Student Management System</h3>
+                        <p class="text-gray-700 mb-4">Comprehensive system for managing student records, grades, attendance, and academic performance.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">PHP</span>
+                            <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm font-semibold">jQuery</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-semibold">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-500 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-8xl opacity-30">📝</div>
+                        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="px-6 py-2 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition">View Demo</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-900">Content Management System</h3>
+                        <p class="text-gray-700 mb-4">Custom CMS for managing website content, blogs, media files, and user permissions.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold">PHP</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-semibold">MySQL</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-semibold">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-purple-500 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-8xl opacity-30">💼</div>
+                        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="px-6 py-2 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition">View Demo</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-900">Corporate Website</h3>
+                        <p class="text-gray-700 mb-4">Professional corporate website with portfolio showcase, contact forms, and service pages.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-semibold">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">JavaScript</span>
+                            <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-semibold">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group">
+                    <div class="h-48 bg-gradient-to-br from-pink-500 to-rose-500 relative overflow-hidden">
+                        <div class="absolute inset-0 flex items-center justify-center text-8xl opacity-30">🎨</div>
+                        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                            <a href="#" class="px-6 py-2 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition">View Demo</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-900">Portfolio Website</h3>
+                        <p class="text-gray-700 mb-4">Modern and responsive portfolio website showcasing creative work and professional achievements.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm font-semibold">HTML5</span>
+                            <span class="px-3 py-1 bg-rose-100 text-rose-700 rounded-full text-sm font-semibold">CSS3</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies & Interests Section -->
+    <section id="hobbies" class="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900">Hobbies & Interests</h2>
+            <p class="text-center text-gray-600 mb-12 text-lg">Beyond work - what drives and inspires me</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                
+                <!-- Hobby 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
+                        🔍
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Internet Research</h3>
+                    <p class="text-gray-600 text-sm">Exploring search engines and discovering new technologies</p>
+                </div>
+
+                <!-- Hobby 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
+                        ⚽
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Sports</h3>
+                    <p class="text-gray-600 text-sm">Football and Badminton enthusiast</p>
+                </div>
+
+                <!-- Hobby 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
+                        🎵
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Music</h3>
+                    <p class="text-gray-600 text-sm">Enjoying various genres and styles</p>
+                </div>
+
+                <!-- Hobby 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-4">
+                        📖
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Reading</h3>
+                    <p class="text-gray-600 text-sm">IT magazines and tech articles</p>
+                </div>
+
+            </div>
+
+            <!-- Personality Traits -->
+            <div class="bg-gradient-to-r from-purple-500 to-pink-500 p-8 rounded-2xl shadow-xl text-white mb-12">
+                <h3 class="text-3xl font-bold text-center mb-6">Personality Traits</h3>
+                <div class="grid md:grid-cols-5 gap-4">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-2">🤝</div>
+                        <p class="font-semibold">Cooperative</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-2">💪</div>
+                        <p class="font-semibold">Helpful</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-2">✨</div>
+                        <p class="font-semibold">Honest</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-2">😊</div>
+                        <p class="font-semibold">Friendly</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-2">🎯</div>
+                        <p class="font-semibold">Prudent</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Language Skills -->
+            <div class="bg-white p-8 rounded-2xl shadow-xl">
+                <h3 class="text-3xl font-bold text-gray-900 mb-6 text-center">Language Proficiency</h3>
+                
+                <div class="max-w-3xl mx-auto">
+                    <!-- English -->
+                    <div class="mb-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center">
+                                <span class="text-3xl mr-3">🇬🇧</span>
+                                <h4 class="text-2xl font-bold text-gray-900">English</h4>
+                            </div>
+                            <span class="px-4 py-2 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-full font-semibold">Good</span>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-4 rounded-xl border-l-4 border-blue-500">
+                                <p class="text-sm text-gray-600 mb-1">Speaking</p>
+                                <div class="flex items-center">
+                                    <div class="flex-1 bg-gray-200 rounded-full h-2 mr-2">
+                                        <div class="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                    <span class="text-xs font-semibold text-blue-600">Good</span>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-green-50 to-teal-50 p-4 rounded-xl border-l-4 border-green-500">
+                                <p class="text-sm text-gray-600 mb-1">Reading</p>
+                                <div class="flex items-center">
+                                    <div class="flex-1 bg-gray-200 rounded-full h-2 mr-2">
+                                        <div class="bg-gradient-to-r from-green-500 to-teal-500 h-2 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                    <span class="text-xs font-semibold text-green-600">Good</span>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-4 rounded-xl border-l-4 border-purple-500">
+                                <p class="text-sm text-gray-600 mb-1">Writing</p>
+                                <div class="flex items-center">
+                                    <div class="flex-1 bg-gray-200 rounded-full h-2 mr-2">
+                                        <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                    <span class="text-xs font-semibold text-purple-600">Good</span>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gradient-to-br from-orange-50 to-red-50 p-4 rounded-xl border-l-4 border-orange-500">
+                                <p class="text-sm text-gray-600 mb-1">Understanding</p>
+                                <div class="flex items-center">
+                                    <div class="flex-1 bg-gray-200 rounded-full h-2 mr-2">
+                                        <div class="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                    <span class="text-xs font-semibold text-orange-600">Good</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khmer (Native) -->
+                    <div class="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-xl border-l-4 border-red-500">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="text-3xl mr-3">🇰🇭</span>
+                                <div>
+                                    <h4 class="text-2xl font-bold text-gray-900">Khmer</h4>
+                                    <p class="text-sm text-gray-600">Native Language</p>
+                                </div>
+                            </div>
+                            <span class="px-4 py-2 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-full font-semibold">Native</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Get In Touch</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">Let's Work Together</h3>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            Have a project in mind or need IT consultation? Feel free to reach out! I'm always open to discussing new opportunities, creative ideas, and technical solutions.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+                                📧
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">Email</p>
+                                <a href="mailto:kith_sophal@gmail.com" class="text-purple-400 hover:text-purple-300 transition">kith_sophal@gmail.com</a>
+                                <br>
+                                <a href="mailto:kithsophal@bbu.edu.kh" class="text-purple-300 hover:text-purple-200 transition text-sm">kithsophal@bbu.edu.kh</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+                                📱
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">Phone</p>
+                                <a href="tel:+85512291027" class="text-cyan-400 hover:text-cyan-300 transition">+855 12 29 10 27</a>
+                                <br>
+                                <a href="tel:+85516291027" class="text-cyan-300 hover:text-cyan-200 transition text-sm">+855 16 29 10 27</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+                                📍
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">Location</p>
+                                <p class="text-gray-300">Kandal Province, Cambodia</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
+                                💼
+                            </div>
+                            <div>
+                                <p class="font-semibold text-lg">Current Position</p>
+                                <p class="text-gray-300">IT Manager at Build Bright University</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="pt-6">
+                        <p class="font-semibold text-lg mb-4">Connect With Me</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://isophal.com/" target="_blank" class="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-2xl hover:scale-110 hover:rotate-12 transition-all duration-300" title="My Website">🌐</a>
+                            <a href="https://github.com/sophalit" target="_blank" class="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center text-2xl hover:scale-110 hover:rotate-12 transition-all duration-300" title="GitHub">🐙</a>
+                            <a href="https://www.youtube.com/@kithsophal" target="_blank" class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-full flex items-center justify-center text-2xl hover:scale-110 hover:rotate-12 transition-all duration-300" title="YouTube">📺</a>
+                            <a href="https://www.facebook.com/ksp.sophal" target="_blank" class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-2xl hover:scale-110 hover:rotate-12 transition-all duration-300" title="Facebook">📘</a>
+                            <a href="https://x.com/kith_sophal" target="_blank" class="w-12 h-12 bg-gradient-to-br from-gray-800 to-black rounded-full flex items-center justify-center text-2xl hover:scale-110 hover:rotate-12 transition-all duration-300" title="X (Twitter)">✖️</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-gray-800 p-8 rounded-2xl shadow-2xl">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-semibold mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-semibold mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required 
+                                   class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-semibold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-semibold text-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2025 KITH SOPHAL. Built with ❤️ and lots of coffee.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="#home" class="text-gray-400 hover:text-purple-400 transition">Home</a>
+                    <a href="#about" class="text-gray-400 hover:text-purple-400 transition">About</a>
+                    <a href="#experience" class="text-gray-400 hover:text-purple-400 transition">Experience</a>
+                    <a href="#skills" class="text-gray-400 hover:text-purple-400 transition">Skills</a>
+                    <a href="#hobbies" class="text-gray-400 hover:text-purple-400 transition">Hobbies</a>
+                    <a href="#contact" class="text-gray-400 hover:text-purple-400 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const burger = document.getElementById('burger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        burger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('shadow-2xl');
+            } else {
+                navbar.classList.remove('shadow-2xl');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Animated skill bars with Intersection Observer
+        const skillBars = document.querySelectorAll('.skill-bar');
+        
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bar = entry.target;
+                    const progress = bar.getAttribute('data-progress');
+                    setTimeout(() => {
+                        bar.style.width = progress + '%';
+                        bar.style.transition = 'width 2s ease';
+                    }, 100);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        skillBars.forEach(bar => {
+            skillObserver.observe(bar);
+        });
+
+        // Scroll Animation for sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for fade-in effect
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            fadeInObserver.observe(section);
+        });
+
+        // Form submission with validation
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Show success message
+            alert('Thank you for your message, ' + data.name + '! I\'ll get back to you soon at ' + data.email);
+            
+            // Reset form
+            contactForm.reset();
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                
+                // Skip if it's just "#"
+                if (href === '#') return;
+                
+                e.preventDefault();
+                const target = document.querySelector(href);
+                
+                if (target) {
+                    const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add active state to navigation based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-purple-400');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('text-purple-400');
+                }
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('#home > div:first-child');
+            
+            if (parallax && scrolled < window.innerHeight) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
